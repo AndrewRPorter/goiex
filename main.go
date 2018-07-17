@@ -1,4 +1,4 @@
-package main
+package goiex
 
 import (
    "fmt"
@@ -119,11 +119,4 @@ func (s *Stock) get_52_low() float64 {
 
 func (s *Stock) get_year_change() float64 {
    return s.YtdChange
-}
-
-func main() {
-   s := get("GEVO")
-
-   fmt.Println(s.get_symbol())
-   fmt.Println(s.get_price())
 }
