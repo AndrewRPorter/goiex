@@ -28,7 +28,7 @@ Usage
 
    func main() {   
       s := goiex.Get("AAPL")
-      s.Println(s.GetPrice())
+      fmt.Println(s.GetPrice())
    }
    
 **Available Methods**
