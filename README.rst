@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.com/AndrewRPorter/goiex.svg?branch=master
+    :target: https://travis-ci.com/AndrewRPorter/goiex
+    
 =====
 goiex
 =====

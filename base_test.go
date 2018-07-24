@@ -1,18 +1,17 @@
 package goiex
 
 import (
-	"github.com/AndrewRPorter/goiex"
 	"testing"
 )
 
 func TestFetch(t *testing.T) {
-	s_one, err := goiex.Get("AAPL")
+	s_one, err := Get("AAPL")
    
    if err != nil {
       t.Errorf("Error fetching tickers!")
    }
    
-	s_two, err := goiex.Get("AMZN")
+	s_two, err := Get("AMZN")
 
    if err != nil {
       t.Errorf("Error fetching tickers!")
