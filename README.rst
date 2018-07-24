@@ -27,7 +27,12 @@ Usage
    )
 
    func main() {   
-      s := goiex.Get("AAPL")
+      s, err := goiex.Get("AAPL")
+      
+      if err != nil {
+         fmt.Errorf("Unable to fetch ticker: %s", "AAPL")
+      }
+      
       fmt.Println(s.GetPrice())
    }
    
