@@ -19,6 +19,8 @@ Usage
 
 .. code:: go
 
+   package main
+   
    import (
       "fmt"
       "github.com/AndrewRPorter/goiex"
@@ -26,7 +28,7 @@ Usage
 
    func main() {   
       s := goiex.Get("AAPL")
-      s.Println(s.GetPrice())
+      fmt.Println(s.GetPrice())
    }
    
 **Available Methods**
