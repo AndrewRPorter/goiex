@@ -3,7 +3,6 @@ package goiex
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -92,12 +91,12 @@ func (s *Stock) GetYearChange() float64 {
 	return s.YtdChange
 }
 
-func Get(ticker string) Stock {
+func Get(ticker string) (Stock, error) {
 	url := fmt.Sprintf("https://api.iextrading.com/1.0/stock/%s/quote", ticker)
 	resp, err := http.Get(url)
 
 	if err != nil {
-		log.Fatalln("Unable to make request: ", err)
+		return Stock{}, err
 	}
 
 	s := Stock{}
@@ -105,8 +104,8 @@ func Get(ticker string) Stock {
 	err = json.NewDecoder(resp.Body).Decode(&s)
 
 	if err != nil {
-		log.Fatalln("Unable to decode JSON: ", err)
+      return Stock{}, fmt.Errorf("Unknown ticker %s", ticker)
 	}
 
-	return s
+	return s, nil
 }
