@@ -19,6 +19,8 @@ Usage
 
 .. code:: go
 
+   package main
+   
    import (
       "fmt"
       "github.com/AndrewRPorter/goiex"
