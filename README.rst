@@ -31,21 +31,19 @@ Usage
    
 **Available Methods**
 
-.. code::
-   
-   GetSymbol()
-   GetName()
-   GetExchange()
-   GetSector()
-   GetOpen()
-   GetClose()
-   GetVolume()
-   GetPrice()
-   GetChange()
-   GetPercentChange()
-   GetAverageVolume()
-   GetMarketCap()
-   GetRatio()
-   GetYearHigh()
-   GetYearLow()
-   GetYearChange()
+- ``GetSymbol()``
+- ``GetName()``
+- ``GetExchange()``
+- ``GetSector()``
+- ``GetOpen()``
+- ``GetClose()``
+- ``GetVolume()``
+- ``GetPrice()``
+- ``GetChange()``
+- ``GetPercentChange()``
+- ``GetAverageVolume()``
+- ``GetMarketCap()``
+- ``GetRatio()``
+- ``GetYearHigh()``
+- ``GetYearLow()``
+- ``GetYearChange()``
