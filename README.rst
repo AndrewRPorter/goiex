@@ -33,6 +33,7 @@ Usage
    
 **Available Methods**
 
+- ``Get()``
 - ``GetSymbol()``
 - ``GetName()``
 - ``GetExchange()``
