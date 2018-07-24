@@ -36,25 +36,30 @@ Usage
          fmt.Errorf("Unable to fetch ticker: %s", "AAPL")
       }
       
-      fmt.Println(s.GetPrice())
+      fmt.Println(s.Price)
    }
    
 **Available Methods**
 
 - ``Get()``
-- ``GetSymbol()``
-- ``GetName()``
-- ``GetExchange()``
-- ``GetSector()``
-- ``GetOpen()``
-- ``GetClose()``
-- ``GetVolume()``
-- ``GetPrice()``
-- ``GetChange()``
-- ``GetPercentChange()``
-- ``GetAverageVolume()``
-- ``GetMarketCap()``
-- ``GetRatio()``
-- ``GetYearHigh()``
-- ``GetYearLow()``
-- ``GetYearChange()``
+
+**Available Fields**
+
+- ``Symbol``
+- ``CompanyName``
+- ``Exchange``
+- ``Sector``
+- ``Open``
+- ``Close``
+- ``High``
+- ``Low``
+- ``Volume``
+- ``Price``
+- ``Change``
+- ``ChangePercent``
+- ``AverageVolume``
+- ``MarketCap``
+- ``PeRatio``
+- ``YearHigh``
+- ``YearLow``
+- ``YtdChange``
