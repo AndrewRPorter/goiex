@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// Stock provides an interface for accessing ticker data parsed from IEX
 type Stock struct {
 	Symbol        string
 	CompanyName   string
@@ -27,6 +28,7 @@ type Stock struct {
 	YtdChange     float64
 }
 
+// Get interpolates stock struct with JSON request data from IEX
 func Get(ticker string) (Stock, error) {
 	url := fmt.Sprintf("https://api.iextrading.com/1.0/stock/%s/quote", ticker)
 	resp, err := http.Get(url)
