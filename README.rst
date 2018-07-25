@@ -37,11 +37,20 @@ Usage
       }
       
       fmt.Println(s.Price)
+      
+      // fetch company information
+      c, err := s.GetCompany()
+      
+      if err != nil {
+         fmt.Errorf("Unable to fetch company data for: %s", s.Symbol)
+      }
+      fmt.Println(c.Description)
    }
    
 **Available Methods**
 
 - ``Get()``
+- ``GetCompany()``
 
 **Available Fields**
 
@@ -63,3 +72,12 @@ Usage
 - ``YearHigh``
 - ``YearLow``
 - ``YtdChange``
+
+- ``Symbol``
+- ``CompanyName``
+- ``Exchange``
+- ``Industry``
+- ``Website``
+- ``Description``
+- ``CEO``
+- ``Sector``

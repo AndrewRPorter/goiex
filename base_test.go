@@ -22,4 +22,14 @@ func TestFetch(t *testing.T) {
 	} else if sOne.Symbol == "" {
 		t.Errorf("Valid ticker has zero value!")
 	}
+	
+	cOne, err := sOne.GetCompany()
+	
+	if err != nil {
+		t.Errorf("Error fetching company information!")
+	}
+	
+	if cOne == (Company{}) {
+		t.Errorf("Valid ticker returns empty company struct")
+	}
 }
