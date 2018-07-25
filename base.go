@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const BASE_URL = "https://api.iextrading.com/1.0/stock"
+const baseURL string = "https://api.iextrading.com/1.0/stock"
 
 // Stock provides an interface for accessing ticker data parsed from IEX
 type Stock struct {
@@ -27,9 +27,10 @@ type Stock struct {
 	PeRatio       float64
 	YearHigh      float64 `json:"week52High"`
 	YearLow       float64 `json:"week52Low"`
-	YtdChange     float64		
+	YtdChange     float64
 }
 
+// Company provides and interface for accessing company data parsed from IEX
 type Company struct {
 	Symbol      string
 	CompanyName string
@@ -41,8 +42,9 @@ type Company struct {
 	Sector      string
 }
 
+// GetCompany interpolates Company struct with JSON requests data from IEX
 func (s Stock) GetCompany() (Company, error) {
-	url := fmt.Sprintf("%s/%s/company", BASE_URL, s.Symbol)
+	url := fmt.Sprintf("%s/%s/company", baseURL, s.Symbol)
 	resp, err := http.Get(url)
 
 	if err != nil {
@@ -60,9 +62,9 @@ func (s Stock) GetCompany() (Company, error) {
 	return c, nil
 }
 
-// Get interpolates stock struct with JSON request data from IEX
+// Get interpolates Stock struct with JSON request data from IEX
 func Get(ticker string) (Stock, error) {
-	url := fmt.Sprintf("%s/%s/quote", BASE_URL, ticker)
+	url := fmt.Sprintf("%s/%s/quote", baseURL, ticker)
 	resp, err := http.Get(url)
 
 	if err != nil {
