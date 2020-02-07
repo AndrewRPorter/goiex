@@ -5,6 +5,8 @@
 goiex
 =====
 
+**Note: the IEX** `api <https://iextrading.com/developers/docs/>`_ **now requires a key for authentication, thus breaking this project.**
+
 A go interface for accessing IEX finanical information. Data provided for free 
 by `IEX <https://iextrading.com/developer/>`_. View `IEX’s Terms of Use 
 <https://iextrading.com/api-exhibit-a/>`_.
